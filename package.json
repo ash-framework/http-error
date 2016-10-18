@@ -73,8 +73,8 @@
       [
         "badge",
         {
-          "image": "https://nodei.co/npm/ash-framework/http-error.png?downloads=true&stars=true",
-          "url": "https://nodei.co/npm/ash-framework/http-error"
+          "image": "https://nodei.co/npm/@ash-framework/http-error.png?downloads=true&stars=true",
+          "url": "https://nodei.co/npm/@ash-framework/http-error"
         }
       ],
       "---",
