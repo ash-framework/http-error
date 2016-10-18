@@ -9,7 +9,7 @@
 
 <span class="badge-badge"><a href="https://mediasuite.co.nz" title="The Media Suite"><img src="https://mediasuite.co.nz/ms-badge.png" alt="The Media Suite" /></a></span>
 <br class="badge-separator" />
-<span class="badge-badge"><a href="https://nodei.co/npm/ash-framework/http-error"><img src="https://nodei.co/npm/ash-framework/http-error.png?downloads=true&stars=true" /></a></span>
+<span class="badge-badge"><a href="https://nodei.co/npm/@ash-framework/http-error"><img src="https://nodei.co/npm/@ash-framework/http-error.png?downloads=true&stars=true" /></a></span>
 <br class="badge-separator" />
 <span class="badge-travisci"><a href="http://travis-ci.org/ash-framework/http-error" title="Check this project's build status on TravisCI"><img src="https://img.shields.io/travis/ash-framework/http-error/master.svg" alt="Travis CI Build Status" /></a></span>
 <span class="badge-npmversion"><a href="https://npmjs.org/package/@ash-framework/http-error" title="View this project on NPM"><img src="https://img.shields.io/npm/v/@ash-framework/http-error.svg" alt="NPM version" /></a></span>
@@ -39,7 +39,30 @@ Class for throwing http specific errors
 
 
 ## Usage
-Usage instructions go here
+Api
+```js
+new HttpError(code, message)
+```js
+
+With status code but no message
+```js
+const error = new HttpError(404)
+
+error.status // 404
+error.message // 'Not Found'
+error.name // 'HttpError'
+error.stack // will output stack trace
+```
+
+With status code and custom message
+```js
+const error = new HttpError(404, 'custom error message')
+
+error.status // 404
+error.message // 'custom error message'
+error.name // 'HttpError'
+error.stack // will output stack trace
+```
 
 <!-- HISTORY/ -->
 
