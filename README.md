@@ -42,7 +42,7 @@ Class for throwing http specific errors
 Api
 ```js
 new HttpError(code, message)
-```js
+```
 
 With status code but no message
 ```js
