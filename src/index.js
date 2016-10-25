@@ -35,4 +35,17 @@ module.exports = class HttpError extends Error {
   set status (code) {
     _status.set(this, code)
   }
+
+  toJSON () {
+    const {NODE_ENV} = process.env
+    const status = this.status || 500
+    const json = {
+      status,
+      message: this.message || STATUS_CODES[status]
+    }
+    if (this.stack && NODE_ENV !== 'production') {
+      json.stack = this.stack
+    }
+    return json
+  }
 }
